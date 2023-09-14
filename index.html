@@ -14,16 +14,18 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
     />
-    <style>
-      nav{
+    <!-- <style>
+      nav {
+        position: sticky;
         top: 0;
       }
       @media (max-width: 576px) {
-        nav{
-        top: 20px;
+        nav {
+          position: sticky;
+          top: 20px;
+        }
       }
-      }
-    </style>
+    </style> -->
   </head>
   <body data-bs-theme="light">
     <!-- Theme Toggle -->
@@ -35,9 +37,9 @@
 
     <!-- Nav bar -->
     <nav
-      class="navbar navbar-expand-md sticky-top navbar-light px-md-4 py-0 my-2 bg-transparent"
+      class="navbar navbar-expand-md sticky-top navbar-light bg-transparent"
     >
-      <div class="container-xl">
+      <div class="container-lg">
         <a class="navbar-brand" href="#intro"
           ><i class="bi bi-bootstrap-fill"></i
           ><span class="fw-bold ms-2">Navbar</span></a
@@ -640,15 +642,15 @@
 
       const themeToggler = document.getElementById("themeToggle");
 
-      themeToggler.onclick = function(){
+      themeToggler.onclick = function () {
         const elm = document.body;
-        elm.dataset.bsTheme = (elm.dataset.bsTheme == 'light') ? 'dark' : 'light';
-        if(elm.dataset.bsTheme == 'dark'){
-          themeToggler.innerHTML ='<i class="bi bi-sun-fill"></i>';
-        } else{
-          themeToggler.innerHTML ='<i class="bi bi-moon-fill"></i>';
+        elm.dataset.bsTheme = elm.dataset.bsTheme == "light" ? "dark" : "light";
+        if (elm.dataset.bsTheme == "dark") {
+          themeToggler.innerHTML = '<i class="bi bi-sun-fill"></i>';
+        } else {
+          themeToggler.innerHTML = '<i class="bi bi-moon-fill"></i>';
         }
-      }
+      };
     </script>
   </body>
 </html>
